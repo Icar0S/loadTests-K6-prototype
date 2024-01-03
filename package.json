@@ -1,0 +1,11 @@
+{
+  "name": "loadTests-K6-prototype",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Icar0S/loadTests-K6-prototype.git",
+  "author": "icar0s <icarooliveira_23@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "k6": "^0.0.0"
+  }
+}

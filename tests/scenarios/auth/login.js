@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 
 export default function () {
-  const url = 'https://www.site.com.br';
+  const url = 'https://petstore.swagger.io/#/user/loginUser';
   const params = {
     headers: {
       'Content-Type': 'application/JSON',
@@ -10,7 +10,7 @@ export default function () {
   };
 
   const data = {
-    "client_id": "test",
+    "client_id": "teste",
     "client_secret": "123",
   };
 
