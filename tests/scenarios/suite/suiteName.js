@@ -3,9 +3,9 @@ import http from 'k6/http';
 import { describe } from 'https://jslib.k6.io/k6chaijs/4.3.4.1/index.js';
 import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 import { check, sleep } from 'k6';
-import payload1 from '../../payloads/suite_name/payload1.json'
+import payload from './payload.json'
 const url = ""
-//var token
+let token
 
 
 export const options = {
@@ -38,7 +38,7 @@ export default function (token) {
 
   describe('01 - Test Case X', () => {
 
-    var request = payload1()
+    let request = payload()
 
     const res = http.post(url, JSON.stringify(request), params);
     check(res, { 'criar status was 201': (r) => r.status == 201 });
